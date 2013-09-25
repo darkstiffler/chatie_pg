@@ -1,6 +1,10 @@
 ChatiePg::Application.routes.draw do
+  post "messages/index" => "messages#create"
   get "messages/index"
   get "messages/create"
+  
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

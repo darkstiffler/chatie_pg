@@ -1,2 +1,21 @@
-<h1>Messages#index</h1>
-<p>Find me in app/views/messages/index.html.erb</p>
+<h1>Chat box</h1>
+
+
+<div id="view">
+<p>
+<% @messages.each do |message| %>
+<%= message.body %>
+<% end %>
+</p>
+</div>
+
+
+
+<div id="text_field">
+<%= form_for :message do |f| %>
+<%= f.label :text %>
+<%= f.text_field :body %>
+<%= f.submit "Send" %>
+<% end %>
+<p></p>
+</div>
