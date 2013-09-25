@@ -4,7 +4,8 @@
 <div id="view">
 <p>
 <% @messages.each do |message| %>
-<%= message.body %>
+<%= message.body %><br>
+<%= time_ago_in_words(message.created_at) %> ago<br><br>
 <% end %>
 </p>
 </div>
